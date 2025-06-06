@@ -9,7 +9,7 @@ function onScroll() {
 
   sections.forEach(section => {
     const top = section.offsetTop - 350;
-    const bottom = top + 500;
+    const bottom = top + 700;
     const content = section.querySelector('.service-content');
 
     if (scrollPos >= top && scrollPos < bottom) {
