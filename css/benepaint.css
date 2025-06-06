@@ -181,6 +181,7 @@ textarea {
 
 /* Sections */
 section {
+	scroll-padding-top: 3300px;
 	width: 100%;
 	scroll-margin-top: 100px;
 	padding: 4rem 1rem;
@@ -487,6 +488,7 @@ footer {
 		position: fixed;
 		top: 70px;
 		left: 0;
+		margin-left: 0px;
 		background-color: transparent;
 		flex-direction: column;
 		width: 100%;
