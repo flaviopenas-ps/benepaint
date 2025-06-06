@@ -10,11 +10,20 @@ function onScroll() {
   sections.forEach(section => {
     const top = section.offsetTop - 350;
     const bottom = top + 500;
+    const content = section.querySelector('.service-content');
+
     if (scrollPos >= top && scrollPos < bottom) {
       const id = section.getAttribute('id');
+
       headerLinks.forEach(link => {
         link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
       });
+
+      section.classList.add('active');
+      content?.classList.add('active');
+    } else {
+      section.classList.remove('active');
+      content?.classList.remove('active');
     }
   });
 }
@@ -42,24 +51,24 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(async (entry) => {
-    const section = entry.target;
-    const content = section.querySelector('.service-content');
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(async (entry) => {
+//     const section = entry.target;
+//     const content = section.querySelector('.service-content');
 
-    if (entry.isIntersecting) {
-      section.classList.add('active');
-      await sleep(300);
-      content?.classList.add('active');
-    } else {
-      content?.classList.remove('active');
-      section.classList.remove('active');
-    }
-  });
-}, {
-  threshold: 0.5,
-  rootMargin: '-10% 0px -10% 0px' // Adjusts the "activation zone" vertically
-});
+//     if (entry.isIntersecting) {
+//       section.classList.add('active');
+//       await sleep(300);
+//       content?.classList.add('active');
+//     } else {
+//       content?.classList.remove('active');
+//       section.classList.remove('active');
+//     }
+//   });
+// }, {
+//   threshold: 0.5,
+//   rootMargin: '-10% 0px -10% 0px' // Adjusts the "activation zone" vertically
+// });
 
-const serviceSections = document.querySelectorAll('.service-section');
-serviceSections.forEach(section => observer.observe(section));
+// const serviceSections = document.querySelectorAll('.service-section');
+// serviceSections.forEach(section => observer.observe(section));
