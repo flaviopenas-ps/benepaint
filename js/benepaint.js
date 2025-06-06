@@ -28,10 +28,14 @@ function onScroll() {
   });
 }
 
+window.addEventListener('scroll', () => {
+  if (window.scrollX < 0) {
+    window.scrollTo(0, window.scrollY);
+  }
+});
 
 window.addEventListener('scroll', onScroll);
 window.addEventListener('load', onScroll);
-
 
 // Toggle menu visibility when hamburger is clicked
 hamburger.addEventListener('click', () => {
