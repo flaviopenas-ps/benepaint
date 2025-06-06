@@ -350,9 +350,15 @@ footer {
 .footer-contact a:hover {
 	color: #ff9900;
 }
+
+.footer-terms {
+	text-align: right;
+}
+
 .footer-terms a {
 	text-decoration: none;
 	color: #f0f0f0;
+	text-align: right;
 }
 
 .footer-terms a:hover {
@@ -371,6 +377,16 @@ footer {
 	margin-left: 50px;
 	margin-right: 50px;
 }
+
+/*show full e-mail on desktop */
+
+#email {
+	display: none;
+}
+#email-mobile{
+	display: inline;
+}
+
 
 /* Mobile Styles */
 @media (max-width: 970px) {
@@ -396,6 +412,14 @@ footer {
 		margin-left: 20px;
 		margin-bottom: 20px;
 	}
+
+	#email{
+	display: inline;
+	}
+	#email-mobile {
+	display: none;
+	}
+
 
 	nav {
 		position: fixed;
