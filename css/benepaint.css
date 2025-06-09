@@ -17,6 +17,8 @@ body {
 	align-items: center;
 }
 
+
+/*header styles*/
 header {
 	position: fixed;
 	top: 0;
@@ -216,6 +218,8 @@ section {
 	cursor: pointer;
 }
 
+/*service section on top effect box*/
+
 .service-section::before,
 .service-section-contact::before {
   content: "";
@@ -227,10 +231,10 @@ section {
   z-index: 1;
   border-radius: 0px;
   transition: background-color 0.5s ease; /* <<< smooth transition */
-  pointer-events: none; /* optional: prevent blocking content below */
+  pointer-events: none; /* to remove any pointer changes*/
 }
 
-
+/*color change on hover or on active */
 .service-section-contact::before {
 	background-color: rgba(255, 255, 255, 0.829);
 }
